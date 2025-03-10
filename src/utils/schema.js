@@ -1,5 +1,5 @@
 export const formSchema = {
-  title: "User Form",
+  title: "Personal",
   fields: [
     { label: "Name", type: "text", required: true },
     { label: "Email", type: "text", validation: "email" },
@@ -10,6 +10,15 @@ export const formSchema = {
 
       fields: [
         { label: "Degree", type: "text" },
+        { label: "Passing_Year", type: "text" },
+      ],
+    },
+    {
+      label: "Experience",
+      type: "nestedSection",
+
+      fields: [
+        { label: "Company", type: "text" },
         { label: "Year", type: "text" },
       ],
     },
